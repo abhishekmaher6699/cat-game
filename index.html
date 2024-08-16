@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Running Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Matemasie&family=Roboto+Condensed:ital,wght@0,435;1,435&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Matemasie&family=Roboto+Condensed:ital,wght@0,435;1,435&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+
+    <div id="startPage" class="start-page">
+        <div class="start-content">
+            <h1 class="game-title">Smol Car's Adventure</h1>
+            <img id="playButton" src="assets/play.png" alt="Play">
+            <p class="instructions">Click Space to Jump</p>
+            <p class="instructions">Collect Ice-Cream</p>
+            <p class="instructions">Collect Potato for extra life</p>
+
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="gameOverPopup" class="popup hidden">
+        <div class="gameoverbox">
+            <p class="title">GAME OVER</p>
+            <img id="gameOverImage" src="assets/win1.jpeg" alt="Game Over">
+            <p class="Score">Score: <span id="finalScore">0</span></p>
+            <p class="highscore">High Score: <span id="highScore">0</span></p>
+            <div class="popup-buttons">
+                <div class="restartblock">
+                    <button id="restartButton" class="button">Restart</button>
+                    <p style="margin: 0; color: black; padding: 0; font-family: monospace;">
+                        or click Enter!
+                    </p>
+                </div>
+                <button id="continueButton" class="button">Continue (<span id="potatoCount">0</span><img id="potatoIcon" src="assets/potato.png" alt="Potato" style="width: 20px; height: 20px; margin-left: 0px;">)</button>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script src="js/utils.js"></script>
+    <script src="js/objects.js"></script>
+    <script src="js/character.js"></script>
+    <script src="js/items.js"></script>
+    <script src="js/graphics.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/game.js"></script>
+
+    
+</body>
+</html>
+ 

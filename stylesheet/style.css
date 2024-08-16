@@ -1,0 +1,224 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background: #87ceeb; /* Sky blue background */
+    transition: background-color 1s ease-in-out;
+}
+
+.start-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.start-content {
+    text-align: center;
+}
+
+.game-title {
+    color: #ffffff; /* White color for the title */
+    font-size: 75px; /* Adjust size as needed */
+    margin-bottom: 20px;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+      
+}
+
+#playButton {
+    cursor: pointer;
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+#playButton:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.instructions {
+    color: #ffffff; /* White color for instructions */
+    font-size: 20px; /* Adjust size as needed */
+    margin-top: 20px;
+    font-family: 'circular';
+}
+
+canvas {
+    display: block;
+}
+
+/* Basic reset and full-screen overlay */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(187 187 187 / 44%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    color: white;
+    text-align: center;
+}
+
+.popup.hidden {
+    display: none;
+}
+.gameoverbox {
+    background: rgb(241 241 241 / 58%);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    height: auto;
+    width: 40%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgb(53 51 51 / 48%);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+.popup-buttons {
+    display: flex;
+    align-items: self-start;
+    width: inherit;
+    margin: 15px;
+    justify-content: center;
+    gap: 45px;
+}
+.title {
+    margin: 0;
+    padding: 0;
+    color: darkturquoise;
+    font-family: "Matemasie", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    text-shadow: 2px 2px 0px black, -2px -2px 0px white, -3px 2px 0px black, 2px -2px 0px white;
+}
+
+.Score {
+    color: #5a5a5a;
+    font-size: 30px;
+    margin: -6px;
+    font-family: cursive;
+    padding: 0;
+
+    
+}
+.highscore {
+    margin: 0;
+    color: #5a5a5a;
+    font-family: cursive;
+    font-size: 13px;
+}
+
+.popup-buttons button {
+    appearance: button;
+    background-color: #1899D6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    /* width: 100%; */
+}
+
+.popup-buttons button:after {
+    background-clip: padding-box;
+    background-color: #1CB0F6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.popup-buttons button:main,
+.popup-buttons button:focus {
+    user-select: auto;
+}
+
+.popup-buttons button:hover:not(:disabled) {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+}
+
+
+.popup-buttons button:active {
+    border-width: 4px 0 0;
+    background: none;
+}
+
+#restartButton {
+    background-color: #1899D6;
+}
+
+#restartButton:after {
+    background-color: #1CB0F6;
+}
+
+/* Specific styles for the continue button */
+#continueButton {
+    background-color: #259840; /* Green color for the continue button */
+}
+
+#continueButton:after {
+    background-color: #17e146; /* Darker green for the continue button */
+}
+
+#continueButton.disabled {
+    background-color: gray; /* Gray color for the disabled continue button */
+    cursor: not-allowed;
+}
+
+#continueButton.disabled:after {
+    background-color: gray; /* Gray color for the after element when disabled */
+}
+
+#continueButton.disabled:hover {
+    filter: none; /* Disable hover effect */
+    -webkit-filter: none; /* Disable hover effect for webkit browsers */
+    cursor: not-allowed; /* Change cursor to indicate the button is disabled */
+}
+
+#gameOverImage {
+    width: 260px;
+    height: auto;
+    border-radius: 21px;
+}
