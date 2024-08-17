@@ -26,7 +26,7 @@ function showGameOverPopup(score, potatoCount) {
 
     // Set the correct image based on the score
     let selectedImage;
-    if (score > 40) {
+    if (score > 20) {
         selectedImage = win_pics[Math.floor(Math.random() * win_pics.length)];
     } else {
         selectedImage = lose_pics[Math.floor(Math.random() * lose_pics.length)];
